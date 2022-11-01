@@ -6,14 +6,14 @@ define('TITLE','Editar cliente');
 
 use \App\Entity\cliente;
 
-//VALIDAÇÃO DO ID
-if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
+//VALIDAÇÃO DO id_cliente
+if(!isset($_GET['id_cliente']) or !is_numeric($_GET['id_cliente'])){
   header('location: index.php?status=error');
   exit;
 }
 
 //CONSULTA A cliente
-$obcliente = cliente::getcliente($_GET['id']);
+$obcliente = cliente::getcliente($_GET['id_cliente']);
 
 //VALIDAÇÃO DA cliente
 if(!$obcliente instanceof cliente){
@@ -22,11 +22,11 @@ if(!$obcliente instanceof cliente){
 }
 
 //VALIDAÇÃO DO POST
-if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
+if(isset($_POST['nome_cliente'],$_POST['idade'],$_POST['situacao'])){
 
-  $obcliente->titulo    = $_POST['titulo'];
-  $obcliente->descricao = $_POST['descricao'];
-  $obcliente->ativo     = $_POST['ativo'];
+  $obcliente->nome_cliente    = $_POST['nome_cliente'];
+  $obcliente->idade = $_POST['idade'];
+  $obcliente->situacao     = $_POST['situacao'];
   $obcliente->atualizar();
 
   header('location: index.php?status=success');

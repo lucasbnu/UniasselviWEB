@@ -4,14 +4,14 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Entity\cliente;
 
-//VALIDAÇÃO DO ID
-if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
+//VALIDAÇÃO DO id_cliente
+if(!isset($_GET['id_cliente']) or !is_numeric($_GET['id_cliente'])){
   header('location: index.php?status=error');
   exit;
 }
 
 //CONSULTA A cliente
-$obcliente = cliente::getcliente($_GET['id']);
+$obcliente = cliente::getcliente($_GET['id_cliente']);
 
 //VALIDAÇÃO DA cliente
 if(!$obcliente instanceof cliente){

@@ -11,25 +11,25 @@ class cliente{
    * Identificador único da cliente
    * @var integer
    */
-  public $id;
+  public $id_cliente;
 
   /**
    * Título da cliente
    * @var string
    */
-  public $titulo;
+  public $nome_cliente;
 
   /**
    * Descrição da cliente (pode conter html)
    * @var string
    */
-  public $descricao;
+  public $idade;
 
   /**
    * Define se a cliente ativa
    * @var string(s/n)
    */
-  public $ativo;
+  public $situacao;
 
 
   /**
@@ -40,10 +40,10 @@ class cliente{
 
     //INSERIR A cliente NO BANCO
     $obDatabase = new Database('clientes');
-    $this->id = $obDatabase->insert([
-                                      'titulo'    => $this->titulo,
-                                      'descricao' => $this->descricao,
-                                      'ativo'     => $this->ativo
+    $this->id_cliente = $obDatabase->insert([
+                                      'nome_cliente'    => $this->nome_cliente,
+                                      'idade' => $this->idade,
+                                      'situacao'     => $this->situacao
                                     ]);
 
     //RETORNAR SUCESSO
@@ -55,10 +55,10 @@ class cliente{
    * @return boolean
    */
   public function atualizar(){
-    return (new Database('clientes'))->update('id = '.$this->id,[
-                                                                'titulo'    => $this->titulo,
-                                                                'descricao' => $this->descricao,
-                                                                'ativo'     => $this->ativo
+    return (new Database('clientes'))->update('id_cliente = '.$this->id_cliente,[
+                                                                'nome_cliente'    => $this->nome_cliente,
+                                                                'idade' => $this->idade,
+                                                                'situacao'     => $this->situacao
                                                               ]);
   }
 
@@ -67,7 +67,7 @@ class cliente{
    * @return boolean
    */
   public function excluir(){
-    return (new Database('clientes'))->delete('id = '.$this->id);
+    return (new Database('clientes'))->delete('id_cliente = '.$this->id_cliente);
   }
 
   /**
@@ -83,12 +83,12 @@ class cliente{
   }
 
   /**
-   * Método responsável por buscar uma cliente com base em seu ID
-   * @param  integer $id
+   * Método responsável por buscar uma cliente com base em seu id_cliente
+   * @param  integer $id_cliente
    * @return cliente
    */
-  public static function getcliente($id){
-    return (new Database('clientes'))->select('id = '.$id)
+  public static function getcliente($id_cliente){
+    return (new Database('clientes'))->select('id_cliente = '.$id_cliente)
                                   ->fetchObject(self::class);
   }
 

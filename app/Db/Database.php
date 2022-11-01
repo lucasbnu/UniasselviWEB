@@ -83,7 +83,7 @@ class Database{
   /**
    * Método responsável por inserir dados no banco
    * @param  array $values [ field => value ]
-   * @return integer ID inserido
+   * @return integer id_cliente inserido
    */
   public function insert($values){
     //DADOS DA QUERY
@@ -96,7 +96,7 @@ class Database{
     //EXECUTA O INSERT
     $this->execute($query,array_values($values));
 
-    //RETORNA O ID INSERIDO
+    //RETORNA O id_cliente INSERIDO
     return $this->connection->lastInsertId();
   }
 

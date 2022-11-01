@@ -8,11 +8,11 @@ use \App\Entity\cliente;
 $obcliente = new cliente;
 
 //VALIDAÇÃO DO POST
-if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
+if(isset($_POST['nome_cliente'],$_POST['idade'],$_POST['situacao'])){
 
-  $obcliente->titulo    = $_POST['titulo'];
-  $obcliente->descricao = $_POST['descricao'];
-  $obcliente->ativo     = $_POST['ativo'];
+  $obcliente->nome_cliente    = $_POST['nome_cliente'];
+  $obcliente->idade = $_POST['idade'];
+  $obcliente->situacao     = $_POST['situacao'];
   $obcliente->cadastrar();
 
   header('location: index.php?status=success');

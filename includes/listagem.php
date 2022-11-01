@@ -16,15 +16,15 @@
   $resultados = '';
   foreach($clientes as $cliente){
     $resultados .= '<tr>
-                      <td>'.$cliente->id.'</td>
-                      <td>'.$cliente->titulo.'</td>
-                      <td>'.$cliente->descricao.'</td>
-                      <td>'.($cliente->ativo == 's' ? 'Ativo' : 'Inativo').'</td>
+                      <td>'.$cliente->id_cliente.'</td>
+                      <td>'.$cliente->nome_cliente.'</td>
+                      <td>'.$cliente->idade.'</td>
+                      <td>'.($cliente->situacao == 's' ? 'Ativo' : 'Inativo').'</td>
                       <td>
-                        <a href="editar.php?id='.$cliente->id.'">
+                        <a href="editar.php?id_cliente='.$cliente->id_cliente.'">
                           <button type="button" class="btn btn-primary">Editar</button>
                         </a>
-                        <a href="excluir.php?id='.$cliente->id.'">
+                        <a href="excluir.php?id_cliente='.$cliente->id_cliente.'">
                           <button type="button" class="btn btn-danger">Excluir</button>
                         </a>
                       </td>
@@ -53,7 +53,7 @@
     <table class="table bg-light mt-3">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>id_cliente</th>
             <th>Título</th>
             <th>Descrição</th>
             <th>Status</th>
