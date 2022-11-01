@@ -31,27 +31,19 @@ class curso{
    */
   public $ativo;
 
-  /**
-   * Data de publicação da curso
-   * @var string
-   */
-  public $data;
 
   /**
    * Método responsável por cadastrar uma nova curso no banco
    * @return boolean
    */
   public function cadastrar(){
-    //DEFINIR A DATA
-    $this->data = date('Y-m-d H:i:s');
 
     //INSERIR A curso NO BANCO
     $obDatabase = new Database('cursos');
     $this->id = $obDatabase->insert([
                                       'titulo'    => $this->titulo,
                                       'descricao' => $this->descricao,
-                                      'ativo'     => $this->ativo,
-                                      'data'      => $this->data
+                                      'ativo'     => $this->ativo
                                     ]);
 
     //RETORNAR SUCESSO
@@ -66,8 +58,7 @@ class curso{
     return (new Database('cursos'))->update('id = '.$this->id,[
                                                                 'titulo'    => $this->titulo,
                                                                 'descricao' => $this->descricao,
-                                                                'ativo'     => $this->ativo,
-                                                                'data'      => $this->data
+                                                                'ativo'     => $this->ativo
                                                               ]);
   }
 

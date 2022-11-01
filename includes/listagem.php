@@ -20,7 +20,6 @@
                       <td>'.$curso->titulo.'</td>
                       <td>'.$curso->descricao.'</td>
                       <td>'.($curso->ativo == 's' ? 'Ativo' : 'Inativo').'</td>
-                      <td>'.date('d/m/Y à\s H:i:s',strtotime($curso->data)).'</td>
                       <td>
                         <a href="editar.php?id='.$curso->id.'">
                           <button type="button" class="btn btn-primary">Editar</button>
@@ -58,7 +57,6 @@
             <th>Título</th>
             <th>Descrição</th>
             <th>Status</th>
-            <th>Data</th>
             <th>Ações</th>
           </tr>
         </thead>
