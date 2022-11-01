@@ -2,8 +2,7 @@
 include __DIR__.'/includes/menu.php';
 ?>
 <style>
-    .logopoha{
-        /* centralize this imagem  at the center of the screen*/
+    .logoprincipal{
         position: absolute;
         top: 20%;
         left: 40%;
@@ -11,6 +10,6 @@ include __DIR__.'/includes/menu.php';
     }
 </style>
 <body class="bg-dark text-light">
-  <img src="img/logo.png" alt="Logo" class="logopoha">
+  <img src="img/logo.png" alt="Logo" class="logoprincipal">
   <h1 class="text-center">POC CLOUD COMPUTING</h1>
 </body>
