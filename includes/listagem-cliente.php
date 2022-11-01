@@ -43,7 +43,7 @@
   <?=$mensagem?>
 
   <section>
-    <a href="cadastrar.php">
+    <a href="cadastrar-cliente.php">
       <button class="btn btn-success">Novo Cliente</button>
     </a>
   </section>
