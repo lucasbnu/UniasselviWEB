@@ -11,25 +11,25 @@ class Database{
    * Host de conexão com o banco de dados
    * @var string
    */
-  const HOST = 'localhost';
+  const HOST = '192.95.52.241';
 
   /**
    * Nome do banco de dados
    * @var string
    */
-  const NAME = 'exemplouniasselvi';
+  const NAME = 'postgres';
 
   /**
    * Usuário do banco
    * @var string
    */
-  const USER = 'root';
+  const USER = 'postgres';
 
   /**
    * Senha de acesso ao banco de dados
    * @var string
    */
-  const PASS = '';
+  const PASS = 'bancotesteuni';
 
   /**
    * Nome da tabela a ser manipulada
@@ -57,7 +57,7 @@ class Database{
    */
   private function setConnection(){
     try{
-      $this->connection = new PDO('mysql:host='.self::HOST.';dbname='.self::NAME,self::USER,self::PASS);
+      $this->connection = new PDO('pgsql:host='.self::HOST.';dbname='.self::NAME,self::USER,self::PASS);
       $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     }catch(PDOException $e){
       die('ERROR: '.$e->getMessage());
