@@ -15,10 +15,10 @@ if(isset($_POST['nome_cliente'],$_POST['idade'],$_POST['situacao'])){
   $obcliente->situacao     = $_POST['situacao'];
   $obcliente->cadastrar();
 
-  header('location: index.php?status=success');
+  header-cliente('location: inicioCliente.php?status=success');
   exit;
 }
 
-include __DIR__.'/includes/header.php';
-include __DIR__.'/includes/formulario.php';
-include __DIR__.'/includes/footer.php';
+include __DIR__.'/includes/header-cliente.php';
+include __DIR__.'/includes/formulario-cliente.php';
+include __DIR__.'/includes/footer-cliente.php';

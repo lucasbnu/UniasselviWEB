@@ -6,7 +6,7 @@ use \App\Entity\cliente;
 
 //VALIDAÇÃO DO id_cliente
 if(!isset($_GET['id_cliente']) or !is_numeric($_GET['id_cliente'])){
-  header('location: index.php?status=error');
+  header-cliente('location: inicioCliente.php?status=error');
   exit;
 }
 
@@ -15,7 +15,7 @@ $obcliente = cliente::getcliente($_GET['id_cliente']);
 
 //VALIDAÇÃO DA cliente
 if(!$obcliente instanceof cliente){
-  header('location: index.php?status=error');
+  header-cliente('location: inicioCliente.php?status=error');
   exit;
 }
 
@@ -24,10 +24,10 @@ if(isset($_POST['excluir'])){
 
   $obcliente->excluir();
 
-  header('location: index.php?status=success');
+  header-cliente('location: inicioCliente.php?status=success');
   exit;
 }
 
-include __DIR__.'/includes/header.php';
-include __DIR__.'/includes/confirmar-exclusao.php';
-include __DIR__.'/includes/footer.php';
+include __DIR__.'/includes/header-cliente.php';
+include __DIR__.'/includes/confirmar-exclusao-cliente-cliente.php';
+include __DIR__.'/includes/footer-cliente.php';

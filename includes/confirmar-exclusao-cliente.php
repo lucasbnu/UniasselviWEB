@@ -9,7 +9,7 @@
     </div>
 
     <div class="form-group">
-      <a href="index.php">
+      <a href="inicioCliente.php">
         <button type="button" class="btn btn-success">Cancelar</button>
       </a>
 

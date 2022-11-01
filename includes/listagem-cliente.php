@@ -21,10 +21,10 @@
                       <td>'.$cliente->idade.'</td>
                       <td>'.($cliente->situacao == 's' ? 'Ativo' : 'Inativo').'</td>
                       <td>
-                        <a href="editar.php?id_cliente='.$cliente->id_cliente.'">
+                        <a href="editar-cliente.php?id_cliente='.$cliente->id_cliente.'">
                           <button type="button" class="btn btn-primary">Editar</button>
                         </a>
-                        <a href="excluir.php?id_cliente='.$cliente->id_cliente.'">
+                        <a href="excluir-cliente.php?id_cliente='.$cliente->id_cliente.'">
                           <button type="button" class="btn btn-danger">Excluir</button>
                         </a>
                       </td>
@@ -53,9 +53,9 @@
     <table class="table bg-light mt-3">
         <thead>
           <tr>
-            <th>id_cliente</th>
-            <th>Título</th>
-            <th>Descrição</th>
+            <th>Identificador</th>
+            <th>Nome</th>
+            <th>Idade</th>
             <th>Status</th>
             <th>Ações</th>
           </tr>
