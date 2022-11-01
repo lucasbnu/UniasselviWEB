@@ -2,18 +2,18 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-define('TITLE','Cadastrar curso');
+define('TITLE','Cadastrar cliente');
 
-use \App\Entity\curso;
-$obcurso = new curso;
+use \App\Entity\cliente;
+$obcliente = new cliente;
 
 //VALIDAÇÃO DO POST
 if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
 
-  $obcurso->titulo    = $_POST['titulo'];
-  $obcurso->descricao = $_POST['descricao'];
-  $obcurso->ativo     = $_POST['ativo'];
-  $obcurso->cadastrar();
+  $obcliente->titulo    = $_POST['titulo'];
+  $obcliente->descricao = $_POST['descricao'];
+  $obcliente->ativo     = $_POST['ativo'];
+  $obcliente->cadastrar();
 
   header('location: index.php?status=success');
   exit;

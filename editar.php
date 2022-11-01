@@ -2,9 +2,9 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-define('TITLE','Editar curso');
+define('TITLE','Editar cliente');
 
-use \App\Entity\curso;
+use \App\Entity\cliente;
 
 //VALIDAÇÃO DO ID
 if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
@@ -12,11 +12,11 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
   exit;
 }
 
-//CONSULTA A curso
-$obcurso = curso::getcurso($_GET['id']);
+//CONSULTA A cliente
+$obcliente = cliente::getcliente($_GET['id']);
 
-//VALIDAÇÃO DA curso
-if(!$obcurso instanceof curso){
+//VALIDAÇÃO DA cliente
+if(!$obcliente instanceof cliente){
   header('location: index.php?status=error');
   exit;
 }
@@ -24,10 +24,10 @@ if(!$obcurso instanceof curso){
 //VALIDAÇÃO DO POST
 if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
 
-  $obcurso->titulo    = $_POST['titulo'];
-  $obcurso->descricao = $_POST['descricao'];
-  $obcurso->ativo     = $_POST['ativo'];
-  $obcurso->atualizar();
+  $obcliente->titulo    = $_POST['titulo'];
+  $obcliente->descricao = $_POST['descricao'];
+  $obcliente->ativo     = $_POST['ativo'];
+  $obcliente->atualizar();
 
   header('location: index.php?status=success');
   exit;

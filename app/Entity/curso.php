@@ -5,41 +5,41 @@ namespace App\Entity;
 use \App\Db\Database;
 use \PDO;
 
-class curso{
+class cliente{
 
   /**
-   * Identificador único da curso
+   * Identificador único da cliente
    * @var integer
    */
   public $id;
 
   /**
-   * Título da curso
+   * Título da cliente
    * @var string
    */
   public $titulo;
 
   /**
-   * Descrição da curso (pode conter html)
+   * Descrição da cliente (pode conter html)
    * @var string
    */
   public $descricao;
 
   /**
-   * Define se a curso ativa
+   * Define se a cliente ativa
    * @var string(s/n)
    */
   public $ativo;
 
 
   /**
-   * Método responsável por cadastrar uma nova curso no banco
+   * Método responsável por cadastrar uma nova cliente no banco
    * @return boolean
    */
   public function cadastrar(){
 
-    //INSERIR A curso NO BANCO
-    $obDatabase = new Database('cursos');
+    //INSERIR A cliente NO BANCO
+    $obDatabase = new Database('clientes');
     $this->id = $obDatabase->insert([
                                       'titulo'    => $this->titulo,
                                       'descricao' => $this->descricao,
@@ -51,11 +51,11 @@ class curso{
   }
 
   /**
-   * Método responsável por atualizar a curso no banco
+   * Método responsável por atualizar a cliente no banco
    * @return boolean
    */
   public function atualizar(){
-    return (new Database('cursos'))->update('id = '.$this->id,[
+    return (new Database('clientes'))->update('id = '.$this->id,[
                                                                 'titulo'    => $this->titulo,
                                                                 'descricao' => $this->descricao,
                                                                 'ativo'     => $this->ativo
@@ -63,32 +63,32 @@ class curso{
   }
 
   /**
-   * Método responsável por excluir a curso do banco
+   * Método responsável por excluir a cliente do banco
    * @return boolean
    */
   public function excluir(){
-    return (new Database('cursos'))->delete('id = '.$this->id);
+    return (new Database('clientes'))->delete('id = '.$this->id);
   }
 
   /**
-   * Método responsável por obter as cursos do banco de dados
+   * Método responsável por obter as clientes do banco de dados
    * @param  string $where
    * @param  string $order
    * @param  string $limit
    * @return array
    */
-  public static function getcursos($where = null, $order = null, $limit = null){
-    return (new Database('cursos'))->select($where,$order,$limit)
+  public static function getclientes($where = null, $order = null, $limit = null){
+    return (new Database('clientes'))->select($where,$order,$limit)
                                   ->fetchAll(PDO::FETCH_CLASS,self::class);
   }
 
   /**
-   * Método responsável por buscar uma curso com base em seu ID
+   * Método responsável por buscar uma cliente com base em seu ID
    * @param  integer $id
-   * @return curso
+   * @return cliente
    */
-  public static function getcurso($id){
-    return (new Database('cursos'))->select('id = '.$id)
+  public static function getcliente($id){
+    return (new Database('clientes'))->select('id = '.$id)
                                   ->fetchObject(self::class);
   }
 

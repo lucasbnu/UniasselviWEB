@@ -12,12 +12,12 @@
 
     <div class="form-group">
       <label>Título</label>
-      <input type="text" class="form-control" name="titulo" value="<?=$obcurso->titulo?>">
+      <input type="text" class="form-control" name="titulo" value="<?=$obcliente->titulo?>">
     </div>
 
     <div class="form-group">
       <label>Descrição</label>
-      <textarea class="form-control" name="descricao" rows="5"><?=$obcurso->descricao?></textarea>
+      <textarea class="form-control" name="descricao" rows="5"><?=$obcliente->descricao?></textarea>
     </div>
 
     <div class="form-group">
@@ -32,7 +32,7 @@
 
           <div class="form-check form-check-inline">
             <label class="form-control">
-              <input type="radio" name="ativo" value="n" <?=$obcurso->ativo == 'n' ? 'checked' : ''?>> Inativo
+              <input type="radio" name="ativo" value="n" <?=$obcliente->ativo == 'n' ? 'checked' : ''?>> Inativo
             </label>
           </div>
       </div>

@@ -2,7 +2,7 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-use \App\Entity\curso;
+use \App\Entity\cliente;
 
 //VALIDAÇÃO DO ID
 if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
@@ -10,11 +10,11 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
   exit;
 }
 
-//CONSULTA A curso
-$obcurso = curso::getcurso($_GET['id']);
+//CONSULTA A cliente
+$obcliente = cliente::getcliente($_GET['id']);
 
-//VALIDAÇÃO DA curso
-if(!$obcurso instanceof curso){
+//VALIDAÇÃO DA cliente
+if(!$obcliente instanceof cliente){
   header('location: index.php?status=error');
   exit;
 }
@@ -22,7 +22,7 @@ if(!$obcurso instanceof curso){
 //VALIDAÇÃO DO POST
 if(isset($_POST['excluir'])){
 
-  $obcurso->excluir();
+  $obcliente->excluir();
 
   header('location: index.php?status=success');
   exit;

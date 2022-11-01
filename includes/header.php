@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>cadastro de cursos</title>
+    <title>cadastro de clientes</title>
   </head>
   <body class="bg-dark text-light">
 
@@ -16,7 +16,7 @@
 
       <div class="jumbotron bg-warning">
         <img src="https://blog.uniasselvi.com.br/wp-content/uploads/2020/09/2054d260-logo-uniasselvi-2019-1_105e05e000000000000000.png">
-        <h1 style="color:black;">CADASTRO DE CURSOS</h1>
+        <h1 style="color:black;">CADASTRO DE clientes</h1>
       </div>
 
 

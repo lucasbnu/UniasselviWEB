@@ -14,17 +14,17 @@
   }
 
   $resultados = '';
-  foreach($cursos as $curso){
+  foreach($clientes as $cliente){
     $resultados .= '<tr>
-                      <td>'.$curso->id.'</td>
-                      <td>'.$curso->titulo.'</td>
-                      <td>'.$curso->descricao.'</td>
-                      <td>'.($curso->ativo == 's' ? 'Ativo' : 'Inativo').'</td>
+                      <td>'.$cliente->id.'</td>
+                      <td>'.$cliente->titulo.'</td>
+                      <td>'.$cliente->descricao.'</td>
+                      <td>'.($cliente->ativo == 's' ? 'Ativo' : 'Inativo').'</td>
                       <td>
-                        <a href="editar.php?id='.$curso->id.'">
+                        <a href="editar.php?id='.$cliente->id.'">
                           <button type="button" class="btn btn-primary">Editar</button>
                         </a>
-                        <a href="excluir.php?id='.$curso->id.'">
+                        <a href="excluir.php?id='.$cliente->id.'">
                           <button type="button" class="btn btn-danger">Excluir</button>
                         </a>
                       </td>
@@ -33,7 +33,7 @@
 
   $resultados = strlen($resultados) ? $resultados : '<tr>
                                                        <td colspan="6" class="text-center">
-                                                              Nenhuma curso encontrada
+                                                              Nenhuma cliente encontrada
                                                        </td>
                                                     </tr>';
 
@@ -44,7 +44,7 @@
 
   <section>
     <a href="cadastrar.php">
-      <button class="btn btn-success">Novo Curso</button>
+      <button class="btn btn-success">Novo Cliente</button>
     </a>
   </section>
 

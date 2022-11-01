@@ -2,7 +2,7 @@
 github.com/lucasbnu
 
 ## TABELA MYSQL
-  CREATE TABLE `cursos` (
+  CREATE TABLE `clientes` (
   	`id` INT(11) NOT NULL AUTO_INCREMENT,
   	`titulo` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
   	`descricao` TEXT(65535) NOT NULL COLLATE 'utf8_general_ci',

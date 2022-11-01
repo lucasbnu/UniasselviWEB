@@ -2,9 +2,9 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-use \App\Entity\curso;
+use \App\Entity\cliente;
 
-$cursos = curso::getcursos();
+$clientes = cliente::getclientes();
 
 include __DIR__.'/includes/header.php';
 include __DIR__.'/includes/listagem.php';
