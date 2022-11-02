@@ -11,7 +11,7 @@
   <form method="post">
 
     <div class="form-group">
-      <label>Título</label>
+      <label>Descrição</label>
       <input type="text" class="form-control" name="descricao_produto" value="<?=$obproduto->descricao_produto?>">
     </div>
 
@@ -26,13 +26,13 @@
       <div>
           <div class="form-check form-check-inline">
             <label class="form-control">
-              <input type="radio" name="situacao" value="s" checked> Ativo
+              <input type="radio" name="situacao" value="A" checked> Ativo
             </label>
           </div>
 
           <div class="form-check form-check-inline">
             <label class="form-control">
-              <input type="radio" name="situacao" value="n" <?=$obproduto->situacao == 'n' ? 'checked' : ''?>> Inativo
+              <input type="radio" name="situacao" value="I" <?=$obproduto->situacao == 'I' ? 'checked' : ''?>> Inativo
             </label>
           </div>
       </div>

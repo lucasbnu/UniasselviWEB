@@ -29,7 +29,7 @@ if(isset($_POST['nome_cliente'],$_POST['idade'],$_POST['situacao'])){
   $obcliente->situacao     = $_POST['situacao'];
   $obcliente->atualizar();
 
-  header-cliente('location: inicioCliente.php?status=success');
+  header('location: inicioCliente.php?status=success');
   exit;
 }
 

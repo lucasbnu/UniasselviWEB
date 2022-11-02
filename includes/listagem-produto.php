@@ -19,7 +19,7 @@
                       <td>'.$produto->id_produto.'</td>
                       <td>'.$produto->descricao_produto.'</td>
                       <td>'.$produto->preco.'</td>
-                      <td>'.($produto->situacao == 's' ? 'Ativo' : 'Inativo').'</td>
+                      <td>'.($produto->situacao == 'A' ? 'Ativo' : 'Inativo').'</td>
                       <td>
                         <a href="editar-produto.php?id_produto='.$produto->id_produto.'">
                           <button type="button" class="btn btn-primary">Editar</button>

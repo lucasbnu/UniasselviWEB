@@ -29,7 +29,7 @@ if(isset($_POST['descricao_produto'],$_POST['preco'],$_POST['situacao'])){
   $obproduto->situacao     = $_POST['situacao'];
   $obproduto->atualizar();
 
-  header-produto('location: inicioProduto.php?status=success');
+  header('location: inicioProduto.php?status=success');
   exit;
 }
 
