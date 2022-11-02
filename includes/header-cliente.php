@@ -15,8 +15,8 @@
     <div class="container">
 
       <div class="jumbotron bg-warning">
-        <img src="https://blog.uniasselvi.com.br/wp-content/uploads/2020/09/2054d260-logo-uniasselvi-2019-1_105e05e000000000000000.png">
-        <h1 style="color:black;">CADASTRO DE clientes</h1>
+        
+        <h1 style="color:black;">CADASTRO DE CLIENTES</h1>
       </div>
 
 

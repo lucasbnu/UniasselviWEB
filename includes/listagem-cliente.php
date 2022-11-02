@@ -33,7 +33,7 @@
 
   $resultados = strlen($resultados) ? $resultados : '<tr>
                                                        <td colspan="6" class="text-center">
-                                                              Nenhuma cliente encontrada
+                                                              Nenhum cliente encontrada
                                                        </td>
                                                     </tr>';
 

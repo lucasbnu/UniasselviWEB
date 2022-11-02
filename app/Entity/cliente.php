@@ -26,7 +26,7 @@ class cliente{
   public $idade;
 
   /**
-   * Define se a cliente ativa
+   * Define se o cliente ativa
    * @var string(s/n)
    */
   public $situacao;
@@ -38,7 +38,7 @@ class cliente{
    */
   public function cadastrar(){
 
-    //INSERIR A cliente NO BANCO
+    //INSERIR o cliente NO BANCO
     $obDatabase = new Database('clientes');
     $this->id_cliente = $obDatabase->insert([
                                       'nome_cliente'    => $this->nome_cliente,
@@ -51,7 +51,7 @@ class cliente{
   }
 
   /**
-   * Método responsável por atualizar a cliente no banco
+   * Método responsável por atualizar o cliente no banco
    * @return boolean
    */
   public function atualizar(){
@@ -63,7 +63,7 @@ class cliente{
   }
 
   /**
-   * Método responsável por excluir a cliente do banco
+   * Método responsável por excluir o cliente do banco
    * @return boolean
    */
   public function excluir(){
@@ -71,7 +71,7 @@ class cliente{
   }
 
   /**
-   * Método responsável por obter as clientes do banco de dados
+   * Método responsável por obter os clientes do banco de dados
    * @param  string $where
    * @param  string $order
    * @param  string $limit
@@ -83,7 +83,7 @@ class cliente{
   }
 
   /**
-   * Método responsável por buscar uma cliente com base em seu id_cliente
+   * Método responsável por buscar um cliente com base em seu id_cliente
    * @param  integer $id_cliente
    * @return cliente
    */
