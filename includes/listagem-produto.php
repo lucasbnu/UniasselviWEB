@@ -55,7 +55,7 @@
           <tr>
             <th>Identificador</th>
             <th>Nome</th>
-            <th>preco</th>
+            <th>preço</th>
             <th>Status</th>
             <th>Ações</th>
           </tr>

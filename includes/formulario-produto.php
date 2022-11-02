@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-group">
-      <label>Descrição</label>
+      <label>Preço</label>
       <textarea class="form-control" name="preco" rows="5"><?=$obproduto->preco?></textarea>
     </div>
 
