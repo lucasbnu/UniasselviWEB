@@ -19,7 +19,7 @@
                       <td>'.$cliente->id_cliente.'</td>
                       <td>'.$cliente->nome_cliente.'</td>
                       <td>'.$cliente->idade.'</td>
-                      <td>'.($cliente->situacao == 's' ? 'Ativo' : 'Inativo').'</td>
+                      <td>'.($cliente->situacao == 'A' ? 'Ativo' : 'Inativo').'</td>
                       <td>
                         <a href="editar-cliente.php?id_cliente='.$cliente->id_cliente.'">
                           <button type="button" class="btn btn-primary">Editar</button>

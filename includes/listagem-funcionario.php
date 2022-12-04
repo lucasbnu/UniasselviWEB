@@ -19,7 +19,7 @@
                       <td>'.$funcionario->id_funcionario.'</td>
                       <td>'.$funcionario->nome_funcionario.'</td>
                       <td>'.$funcionario->idade.'</td>
-                      <td>'.($funcionario->situacao == 's' ? 'Ativo' : 'Inativo').'</td>
+                      <td>'.($funcionario->situacao == 'A' ? 'Ativo' : 'Inativo').'</td>
                       <td>
                         <a href="editar-funcionario.php?id_funcionario='.$funcionario->id_funcionario.'">
                           <button type="button" class="btn btn-primary">Editar</button>

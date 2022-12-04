@@ -11,12 +11,12 @@
   <form method="post">
 
     <div class="form-group">
-      <label>Título</label>
+      <label>Nome</label>
       <input type="text" class="form-control" name="nome_cliente" value="<?=$obcliente->nome_cliente?>">
     </div>
 
     <div class="form-group">
-      <label>Descrição</label>
+      <label>Idade</label>
       <textarea class="form-control" name="idade" rows="5"><?=$obcliente->idade?></textarea>
     </div>
 
@@ -26,13 +26,13 @@
       <div>
           <div class="form-check form-check-inline">
             <label class="form-control">
-              <input type="radio" name="situacao" value="s" checked> Ativo
+              <input type="radio" name="situacao" value="A" checked> Ativo
             </label>
           </div>
 
           <div class="form-check form-check-inline">
             <label class="form-control">
-              <input type="radio" name="situacao" value="n" <?=$obcliente->situacao == 'n' ? 'checked' : ''?>> Inativo
+              <input type="radio" name="situacao" value="I" <?=$obcliente->situacao == 'I' ? 'checked' : ''?>> Inativo
             </label>
           </div>
       </div>
