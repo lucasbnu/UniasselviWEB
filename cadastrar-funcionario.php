@@ -15,7 +15,7 @@ if(isset($_POST['nome_funcionario'],$_POST['idade'],$_POST['situacao'])){
   $obfuncionario->situacao     = $_POST['situacao'];
   $obfuncionario->cadastrar();
 
-  header-funcionario('location: inicioFuncionario.php?status=success');
+  header('location: inicioFuncionario.php?status=success');
   exit;
 }
 

@@ -24,10 +24,10 @@ if(isset($_POST['excluir'])){
 
   $obproduto->excluir();
 
-  header-produto('location: inicioProduto.php?status=success');
+  header('location: inicioProduto.php?status=success');
   exit;
 }
 
 include __DIR__.'/includes/header-produto.php';
-include __DIR__.'/includes/confirmar-exclusao-produto-produto.php';
+include __DIR__.'/includes/confirmar-exclusao-produto.php';
 include __DIR__.'/includes/footer-produto.php';

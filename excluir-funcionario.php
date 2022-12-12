@@ -15,7 +15,7 @@ $obfuncionario = funcionario::getfuncionario($_GET['id_funcionario']);
 
 //VALIDAÇÃO Do funcionario
 if(!$obfuncionario instanceof funcionario){
-  header-funcionario('location: inicioFuncionario.php?status=error');
+  header('location: inicioFuncionario.php?status=error');
   exit;
 }
 
@@ -24,10 +24,10 @@ if(isset($_POST['excluir'])){
 
   $obfuncionario->excluir();
 
-  header-funcionario('location: inicioFuncionario.php?status=success');
+  header('location: inicioFuncionario.php?status=success');
   exit;
 }
 
 include __DIR__.'/includes/header-funcionario.php';
-include __DIR__.'/includes/confirmar-exclusao-funcionario-funcionario.php';
+include __DIR__.'/includes/confirmar-exclusao-funcionario.php';
 include __DIR__.'/includes/footer-funcionario.php';
